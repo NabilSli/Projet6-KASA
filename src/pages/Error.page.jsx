@@ -1,7 +1,11 @@
 import React from 'react'
 
-export default function HomePage() {
-  return (
-    <div>Error</div>
-  )
+function Error() {
+    return (
+        <div>
+            <h1>Oups 🙈 Cette page n'existe pas</h1>
+        </div>
+    )
 }
+ 
+export default Error
