@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function HomePage() {
+import Layout from '../components/layout'
+
+export default function App() {
   return (
-    <div>Hello world</div>
+    <Layout />
   )
 }
