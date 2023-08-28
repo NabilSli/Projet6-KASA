@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.navLinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; 
+
+    li{
+        margin: 0 15px;
+    }
+    a{
+        text-decoration: none;
+        color:$main-txt-color;
+        display: flex;
+        flex-wrap: nowrap;
+    }   
+        a:hover {
+            border-bottom: solid 2px $main-txt-color;
+        }
+
+}
+
+    
+.footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 60px 0;
+}
+    p{
+        color: white;
+    }

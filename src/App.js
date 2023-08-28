@@ -4,7 +4,7 @@ import Home from "./pages/Home.page";
 import AboutUs from "./pages/About.page";
 import Error from "./pages/Error.page";
 import Housing from "./pages/Housing.page";
-import Layout from "./components/Layout";
+import Layout from "./components/layout.jsx";
 
 function App() {
   return (
