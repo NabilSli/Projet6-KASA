@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import routes from "../routes";
 
 import logoHeader from "../assets/logoHeader.svg"
 import logoFooter from "../assets/logoFooter.svg"
-import { NavLink } from "react-router-dom";
 
 function Layout({ children }) {
     return (
@@ -11,8 +12,8 @@ function Layout({ children }) {
             <img alt="logo de Kasa" src={logoHeader} className="logoHeader"></img>
             <nav>
                 <ul className="navLinks">
-                    <li><NavLink to={"/"}>Accueil</NavLink></li>
-                    <li><NavLink to={"aboutus"}>A Propos</NavLink></li>
+                    <li><NavLink to={routes.Home.path}>Accueil</NavLink></li>
+                    <li><NavLink to={routes.Aboutus.path}>A Propos</NavLink></li>
                 </ul>
             </nav>
         </header>
