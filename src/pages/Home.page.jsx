@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Home() {
+
+export default function App() {
   return (
-    <div>Home.page</div>
+    <article className='pageTitle'>
+      <h1>Chez vous,<br/>partout et ailleurs</h1>
+    </article>
   )
 }

@@ -1,10 +1,19 @@
-import Home from "./pages/Home.page";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./components/layout.jsx";
+
+import routes from "./routes.js";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          {Object.values(routes).map((route) => (
+            <Route path={route.path} element={<route.Element />} key={<id />} />
+          ))}
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
