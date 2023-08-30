@@ -1,10 +1,11 @@
 import React from 'react'
+import TitleCard from '../components/cards/TitleCard'
 
-
-export default function App() {
+export default function HomePage() {
   return (
-    <article className='pageTitle'>
-      <h1>Chez vous,<br/>partout et ailleurs</h1>
-    </article>
+    <section className='pageTitle'>
+      <TitleCard />
+      <p>yolo</p>
+    </section>
   )
 }
