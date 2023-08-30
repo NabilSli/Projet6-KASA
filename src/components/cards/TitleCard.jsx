@@ -6,5 +6,5 @@ export default function TitleCard() {
         <img src={null} alt="Title background"></img>
         <h1>Chez vous,<br/>partout et ailleurs</h1>    
         </article>
-) 
+    ) 
 }
