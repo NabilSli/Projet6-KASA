@@ -5,7 +5,6 @@ export default function HomePage() {
   return (
     <section className='pageTitle'>
       <TitleCard />
-      <p>yolo</p>
     </section>
   )
 }
