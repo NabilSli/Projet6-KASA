@@ -17,9 +17,9 @@ function Layout({ children }) {
                 </ul>
             </nav>
         </header>
-            
+        <section className="bodyContainer">    
         {children}
-            
+        </section>    
         <footer className="footer">
             <img alt="logo de Kasa" src={logoFooter} className="logoFooter"></img>
             <p>© 2020 Kasa. All<br/> rights reserved</p>
