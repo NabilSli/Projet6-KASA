@@ -2,49 +2,48 @@
 @import "variable";
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 .navLinks {
-    list-style-type: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    margin: 0 15px;
+  }
+  a {
+    text-decoration: none;
+    color: $main-txt-color;
     display: flex;
-    justify-content: space-around; 
-
-    li{
-        margin: 0 15px;
-    }
-    a{
-        text-decoration: none;
-        color:$main-txt-color;
-        display: flex;
-        flex-wrap: nowrap;
-    }   
-        a:hover {
-            border-bottom: solid 2px $main-txt-color;
-        }
-
+    flex-wrap: nowrap;
+  }
+  a:hover {
+    border-bottom: solid 2px $main-txt-color;
+  }
 }
 
 .bodyContainer {
-    margin: 20px;
+  margin: 20px;
 }
-    
-.footer {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 60px 0;
-    margin: 0;
 
-    p {
-        color: white;
-    }
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 60px 0;
+  margin: 0;
+
+  p {
+    color: white;
+  }
 }
