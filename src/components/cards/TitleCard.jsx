@@ -1,10 +1,9 @@
 import React from "react";
 
-import "../../scss/components/titleCard.scss";
-import titleBackground from "../../assets/titleBackground.svg";
+import "../../scss/components/_titleCard.scss";
 
 // TODO: add image file and src
-export default function TitleCard() {
+export default function TitleCard(imgSrc, ImgAlt, title) {
   return (
     <article className="titleCardContainer">
       <h1 className="pageTitle">
