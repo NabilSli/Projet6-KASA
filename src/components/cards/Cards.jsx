@@ -1,12 +1,10 @@
 import React from "react";
-
-import "../../scss/components/_cards.scss";
+import { Link } from "react-router-dom";
 
 export const Card = ({ title, link }) => {
   return (
-    <article className="cardCointainer">
+    <Link className="cardCointainer">
       {title && <h2 className="cardTitle">{title}</h2>}
-      {link && <a href={link} className="cardLink"></a>}
-    </article>
+    </Link>
   );
 };
