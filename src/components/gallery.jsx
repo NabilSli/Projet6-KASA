@@ -4,7 +4,7 @@ import { Card } from "./cards/Cards";
 
 async function getHousing() {
   try {
-    const fetchResponse = await fetch(`../../assets/data/housingData.json`);
+    const fetchResponse = await fetch("/data/housingData.json");
     const response = await fetchResponse.json();
     return response;
   } catch (error) {
