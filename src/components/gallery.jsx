@@ -6,11 +6,6 @@ export default function Gallery() {
   return (
     <section className="gallery">
       <Card title="Titre de la location" link="#" />
-      <Card title="Titre de la location" link="#" />
-      <Card title="Titre de la location" link="#" />
-      <Card title="Titre de la location" link="#" />
-      <Card title="Titre de la location" link="#" />
-      <Card title="Titre de la location" link="#" />
     </section>
   );
 }

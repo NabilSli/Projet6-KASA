@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Card = ({ title, link }) => {
   return (
-    <Link className="cardCointainer">
+    <Link className="cardContainer">
       {title && <h2 className="cardTitle">{title}</h2>}
     </Link>
   );
