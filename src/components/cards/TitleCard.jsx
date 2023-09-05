@@ -1,6 +1,5 @@
 import React from "react";
 
-// TODO: add image file and src
 export default function TitleCard() {
   return (
     <article className="titleCardContainer">
