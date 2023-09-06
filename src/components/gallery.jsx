@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 
 import { Card } from "./cards/Cards";
 
-// NOTE:  preparing API integration by fetching the data with an async function
+// NOTE: preparing API integration by fetching the data with an async function
 async function getHousing() {
   try {
     const fetchResponse = await fetch("/data/housingData.json");
     const response = await fetchResponse.json();
+    console.log(response);
     return response;
   } catch (error) {
     console.error();
@@ -19,6 +20,7 @@ export default function Gallery() {
   const [housings, setHousings] = useState(null);
   const [error, setError] = useState(false);
 
+  // TODO: abstarct this into a hook
   useEffect(() => {
     let ignore = false;
     getHousing().then((result) => {
@@ -36,9 +38,18 @@ export default function Gallery() {
     };
   }, []);
 
+  // TODO: faut il afficher une erreur ou renvoyer vers la page 404
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  if (!housings) return <p>Loading ...</p>;
+
   return (
     <section className="gallery">
-      <Card title="Titre de la location" link="#" />
+      {housings.map((house) => (
+        <Card title={house.title} key={house.id} image={house.cover} />
+      ))}
     </section>
   );
 }
