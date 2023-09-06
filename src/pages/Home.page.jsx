@@ -5,7 +5,7 @@ import Gallery from "../components/gallery";
 
 export default function HomePage() {
   return (
-    <section className="pageTitle">
+    <section className="pageCards">
       <TitleCard />
       <Gallery />
     </section>
