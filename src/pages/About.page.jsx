@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import Collapse from "../components/collapse";
 
 export default function AboutPage() {
-  const [isReliabilityDisplayed, setReliabilityVisibility] = useState(false);
-  const [isRespectDisplayed, setRespectVisibility] = useState(false);
+  const [selectedCollapse, setSelectedCollapse] = useState(null);
 
   return (
     <div>
@@ -12,31 +11,36 @@ export default function AboutPage() {
         collapseTitle="Fiablitité"
         collapseTexte="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
  régulièrement vérifiées par nos équipes."
-        isOpen={isReliabilityDisplayed}
+        isOpen={selectedCollapse === "reliability"}
         close={() => {
-          setReliabilityVisibility(false);
+          setSelectedCollapse(null);
         }}
         open={() => {
-          setReliabilityVisibility(true);
-          setRespectVisibility(false);
+          setSelectedCollapse("reliability");
         }}
       />
       <Collapse
         collapseTitle="Respect"
         collapseTexte="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
 perturbation du voisinage entraînera une exclusion de notre plateforme."
-        isOpen={isRespectDisplayed}
+        isOpen={selectedCollapse === "respect"}
         close={() => {
-          setRespectVisibility(false);
+          setSelectedCollapse(null);
         }}
         open={() => {
-          setRespectVisibility(true);
-          setReliabilityVisibility(false);
+          setSelectedCollapse("respect");
         }}
       />
       <Collapse
         collapseTitle="Service"
         collapseTexte="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+        isOpen={selectedCollapse === "service"}
+        close={() => {
+          selectedCollapse(null);
+        }}
+        open={() => {
+          setSelectedCollapse("service");
+        }}
       />
       <Collapse
         collapseTitle="Sécurité"
@@ -44,6 +48,13 @@ perturbation du voisinage entraînera une exclusion de notre plateforme."
 correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
 locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
 également des ateliers sur la sécurité domestique pour nos hôtes."
+        isOpen={selectedCollapse === "security"}
+        close={() => {
+          setSelectedCollapse(null);
+        }}
+        open={() => {
+          setSelectedCollapse("security");
+        }}
       />
     </div>
   );

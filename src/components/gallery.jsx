@@ -26,7 +26,6 @@ export default function Gallery() {
     };
   }, []);
 
-  // TODO: faut il afficher une erreur ou renvoyer vers la page 404
   if (error) {
     return <p>{error}</p>;
   }
