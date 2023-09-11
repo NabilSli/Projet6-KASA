@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { Card } from "./cards/Cards";
-
-// NOTE: preparing API integration by fetching the data with an async function
-async function getHousing() {
-  try {
-    const fetchResponse = await fetch("/data/housingData.json");
-    const response = await fetchResponse.json();
-    console.log(response);
-    return response;
-  } catch (error) {
-    console.error();
-    return null;
-  }
-}
+import GetData from "././getData";
 
 // NOTE: using useEffect to catch errors of fetch and have an error message show up for better UI
 export default function Gallery() {
@@ -23,7 +11,7 @@ export default function Gallery() {
   // TODO: abstarct this into a hook
   useEffect(() => {
     let ignore = false;
-    getHousing().then((result) => {
+    GetData().then((result) => {
       if (!ignore) {
         if (typeof result == "object") {
           setHousings(result);
