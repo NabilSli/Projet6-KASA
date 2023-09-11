@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Card = ({ title, image }) => {
   return (
-    <Link>
+    <Link to={"/housing"}>
       <div
         className="cardContainer"
         style={{
