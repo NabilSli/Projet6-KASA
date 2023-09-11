@@ -3,12 +3,16 @@ import { useState } from "react";
 import arrowUp from "../assets/images/arrowUp.svg";
 import arrowDown from "../assets/images/arrowDown.svg";
 
-export default function Collapse({ collapseTitle, collapseTexte }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function Collapse({
+  collapseTitle,
+  collapseTexte,
+  isOpen,
+  open,
+  close,
+}) {
   return isOpen ? (
     <div className="collapseComponentOpen">
-      <button onClick={() => setIsOpen(false)}>
+      <button onClick={close}>
         {collapseTitle}
         <img alt="fleche de fermeture du menu" src={arrowUp}></img>
         <p className="collapseTexte">{collapseTexte}</p>
@@ -16,7 +20,7 @@ export default function Collapse({ collapseTitle, collapseTexte }) {
     </div>
   ) : (
     <div className="collapseComponentClosed">
-      <button onClick={() => setIsOpen(true)}>
+      <button onClick={open}>
         {collapseTitle}
         <img alt="fleche d'ouverture du menu" src={arrowDown}></img>
       </button>
