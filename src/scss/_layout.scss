@@ -41,6 +41,42 @@
 
 .bodyContainer {
   margin: 20px;
+  height: 100vh;
+}
+
+.errorPageLayout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.errorPageTitle {
+  color: #ff6060;
+  text-align: center;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%; /* 136.896px */
+}
+
+.errorPageTexte {
+  color: #ff6060;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+}
+
+.errorPageLink {
+  color: #ff6060;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 19.964px */
+  text-decoration-line: underline;
 }
 
 .footer {
