@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+
+import Collapse from "../components/collapse";
 
 export default function AboutPage() {
   return (
-    <div>About us</div>
-  )
+    <div>
+      <Collapse collapseTitle="Fiablitité" collapseTexte="lorem ipsum" />
+    </div>
+  );
 }

@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import arrowUp from "../assets/images/arrowUp";
-import arrowDown from "../assets/images/arrowDown";
+import arrowUp from "../assets/images/arrowUp.svg";
+import arrowDown from "../assets/images/arrowDown.svg";
 
-export default function Collapse() {
+export default function Collapse({ collapseTitle, collapseTexte }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
     <div className="collapseComponentOpen">
       <button onClick={() => setIsOpen(false)}>
-        Fiabilité
+        {collapseTitle}
         <img alt="fleche de fermeture du menu" src={arrowUp}></img>
+        <p className="collapseTexte">{collapseTexte}</p>
       </button>
-      <p className="collapseTexte">lorem ipsum</p>
     </div>
   ) : (
     <div className="collapseComponentClosed">
       <button onClick={() => setIsOpen(true)}>
-        Fiabilité
+        {collapseTitle}
         <img alt="fleche d'ouverture du menu" src={arrowDown}></img>
       </button>
     </div>
