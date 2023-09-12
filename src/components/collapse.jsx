@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import arrowUp from "../assets/images/arrowUp.svg";
 import arrowDown from "../assets/images/arrowDown.svg";
 
