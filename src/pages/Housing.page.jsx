@@ -1,6 +1,6 @@
 import React from "react";
 
-import GetData from "../components/getData";
+import useHousings from "../components/useHousings";
 
 export default function HousingPage() {
   return <div>Housing</div>;
