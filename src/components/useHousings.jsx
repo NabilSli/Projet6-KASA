@@ -14,13 +14,15 @@ export default async function useHousings() {
       setLoading(true);
       fetch("/data/housingData.json")
         .then((response) => {
-          response.json().then((jsonResponse) => {
-            setHousings(jsonResponse);
-            setLoading(false);
-          });
+          return response.json();
+        })
+        .then((jsonResponse) => {
+          setHousings(jsonResponse);
         })
         .catch((error) => {
           setError(error);
+        })
+        .finally(() => {
           setLoading(false);
         });
     }
