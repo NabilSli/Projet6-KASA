@@ -11,16 +11,18 @@ export default function Collapse({
   return isOpen ? (
     <div className="collapseComponentOpen">
       <button onClick={close}>
-        {collapseTitle}
-        <img alt="fleche de fermeture du menu" src={arrowUp}></img>
-        <p className="collapseTexte">{collapseTexte}</p>
+        <section>
+          <p>{collapseTitle}</p>
+          <img alt="fleche de fermeture du menu" src={arrowDown}></img>
+        </section>
+        <p className="openCollapseTexte">{collapseTexte}</p>
       </button>
     </div>
   ) : (
     <div className="collapseComponentClosed">
       <button onClick={open}>
-        {collapseTitle}
-        <img alt="fleche d'ouverture du menu" src={arrowDown}></img>
+        <p>{collapseTitle}</p>
+        <img alt="fleche d'ouverture du menu" src={arrowUp}></img>
       </button>
     </div>
   );

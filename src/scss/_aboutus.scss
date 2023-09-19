@@ -1,0 +1,79 @@
+@import "base";
+@import "variable";
+
+.imageCard {
+  width: 100%;
+  border-radius: 5px;
+  height: 111px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/cardBackground.svg");
+  background-size: cover;
+  background-position: center;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+.collapseComponentClosed {
+  button {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-txt-color;
+    border: none;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    transition: all 450ms;
+    &:active {
+      img {
+        transform: rotate(0.5turn);
+      }
+    }
+  }
+}
+
+.collapseComponentOpen {
+  button {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    section {
+      color: #fff;
+      background-color: $main-txt-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      width: 100%;
+    }
+    transition: all 450ms;
+    &:active {
+      img {
+        transform: rotate(0.5turn);
+      }
+    }
+  }
+}
+
+.openCollapseTexte {
+  color: $main-txt-color;
+  background-color: #f6f6f6;
+  padding: 20px;
+  text-align: start;
+  line-height: 130%;
+  font-style: normal;
+}

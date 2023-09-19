@@ -7,6 +7,7 @@ export default function AboutPage() {
 
   return (
     <div>
+      <section className="imageCard"></section>
       <Collapse
         collapseTitle="Fiablitité"
         collapseTexte="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
@@ -36,7 +37,7 @@ perturbation du voisinage entraînera une exclusion de notre plateforme."
         collapseTexte="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
         isOpen={selectedCollapse === "service"}
         close={() => {
-          selectedCollapse(null);
+          setSelectedCollapse(null);
         }}
         open={() => {
           setSelectedCollapse("service");
