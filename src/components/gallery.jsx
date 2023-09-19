@@ -3,9 +3,11 @@ import React from "react";
 import { Card } from "./cards/Cards";
 import useHousings from "./useHousings";
 
-// NOTE: using useEffect to catch errors of fetch and have an error message show up for better UI
+// NOTE: this function uses the fetch to either show housings or
+//       loading while it get the data or an error if ther is no data
 export default function Gallery() {
   const { error, housings, isLoading } = useHousings();
+  console.log(housings);
 
   if (error) {
     return <p>{error}</p>;

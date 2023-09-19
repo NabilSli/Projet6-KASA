@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // NOTE: preparing API integration by fetching the data with an async function
 export default async function useHousings() {
@@ -31,6 +31,6 @@ export default async function useHousings() {
       ignore = true;
     };
   }, []);
-
+  console.log(housings);
   return { isLoading, error, housings };
 }
