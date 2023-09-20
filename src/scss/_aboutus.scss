@@ -77,3 +77,23 @@
   line-height: 130%;
   font-style: normal;
 }
+
+@media (min-width: 769px) {
+  .collapseSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    width: 100%;
+  }
+
+  .collapseComponentClosed {
+    width: 100%;
+    button {
+      padding: 20px 10px;
+    }
+  }
+  .imageCard {
+    border-radius: 25px;
+    height: 213px;
+  }
+}
