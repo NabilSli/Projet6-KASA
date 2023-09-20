@@ -1,5 +1,4 @@
-import arrowUp from "../assets/images/arrowUp.svg";
-import arrowDown from "../assets/images/arrowDown.svg";
+import arrow from "../assets/images/arrow.svg";
 
 export default function Collapse({
   collapseTitle,
@@ -8,21 +7,19 @@ export default function Collapse({
   open,
   close,
 }) {
-  return isOpen ? (
-    <div className="collapseComponentOpen">
-      <button onClick={close}>
+  return (
+    <div className="collapseComponent">
+      <button onClick={isOpen ? close : open}>
         <section>
           <p>{collapseTitle}</p>
-          <img alt="fleche de fermeture du menu" src={arrowDown}></img>
+          <img alt="fleche de fermeture du menu" src={arrow}></img>
         </section>
-        <p className="openCollapseTexte">{collapseTexte}</p>
-      </button>
-    </div>
-  ) : (
-    <div className="collapseComponentClosed">
-      <button onClick={open}>
-        <p>{collapseTitle}</p>
-        <img alt="fleche d'ouverture du menu" src={arrowUp}></img>
+        <p
+          onClick={close}
+          className={`text-container ${isOpen ? "open" : "closed"}`}
+        >
+          {collapseTexte}
+        </p>
       </button>
     </div>
   );
