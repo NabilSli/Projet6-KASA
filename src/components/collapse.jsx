@@ -10,13 +10,15 @@ export default function Collapse({
   return (
     <div className="collapseComponent">
       <button onClick={isOpen ? close : open}>
-        <section>
+        <section className="collapseTitle">
           <p>{collapseTitle}</p>
           <img alt="fleche de fermeture du menu" src={arrow}></img>
         </section>
-        <p className={`text-container ${isOpen ? "open" : "closed"}`}>
-          {collapseTexte}
-        </p>
+        <section className="collapseTexte">
+          <p className={`text-container ${isOpen ? "open" : "closed"}`}>
+            {collapseTexte}
+          </p>
+        </section>
       </button>
     </div>
   );
