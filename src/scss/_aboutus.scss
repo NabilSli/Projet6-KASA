@@ -16,91 +16,13 @@
   margin-bottom: 20px;
 }
 
-.collapseComponentClosed {
-  button {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    display: flex;
-    height: 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $main-txt-color;
-    border: none;
-    padding: 0 10px;
-    color: #fff;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    transition: height 1500ms ease-in-out;
-    section {
-      border-radius: 5px;
-    }
-  }
-}
-.openCollapseTexte {
-  transition: height 1500ms ease-in-out;
-}
-.collapseComponentOpen {
-  button {
-    background-color: #fff;
-    width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    border: none;
-
-    section {
-      color: #fff;
-      background-color: $main-txt-color;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      width: 100%;
-      border-radius: 5px;
-    }
-    p {
-      border-radius: 0 0 5px 5px;
-    }
-  }
-}
-
-.openCollapseTexte {
-  color: $main-txt-color;
-  background-color: #f6f6f6;
-  padding: 20px;
-  text-align: start;
-  line-height: 130%;
-  font-style: normal;
-}
-
-@media (min-width: 769px) {
-  .collapseSection {
-    display: flex;
-    flex-direction: column;
-    padding: 0 70px;
-    width: 100%;
-  }
-
-  .collapseComponentClosed {
-    width: 100%;
-    button {
-      padding: 20px 10px;
-    }
-  }
-  .imageCard {
-    border-radius: 25px;
-    height: 213px;
-  }
-}
-
 .text-container {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: transform max-height 0.3s ease-in-out;
+  .collapseTitle img {
+    transform: rotate(0deg);
+  }
 }
 
 .text-container.closed {
@@ -110,7 +32,58 @@
 }
 
 .text-container.open {
-  max-height: 100px; /* Adjust this based on your content size */
+  max-height: 120px; /* Adjust this based on your content size */
   opacity: 1;
   transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  padding: 10px 20px 20px 20px;
+  .collapseTitle img {
+    transform: rotate(180deg);
+  }
+}
+
+.collapseComponent {
+  margin-bottom: 20px;
+  button {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+  }
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.collapseTitle {
+  width: 100%;
+  background-color: $main-txt-color;
+  border: none;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.collapseTexte {
+  color: $main-txt-color;
+  border-radius: 0 0 5px 5px;
+  background-color: #f6f6f6;
+  text-align: start;
+}
+
+@media (min-width: 769px) {
+  .collapseSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    width: 100%;
+  }
+  .imageCard {
+    border-radius: 25px;
+    height: 213px;
+  }
 }
