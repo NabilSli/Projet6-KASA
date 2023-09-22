@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
 // NOTE: preparing API integration by fetching the data with an async function
-export default async function useHousings() {
-  const [housings, setHousings] = useState(null);
+export default function useHousings() {
+  const [housings, setHousings] = useState([]);
   const [error, setError] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
-  // TODO: abstarct this into a hook and add .catch for errors
   useEffect(() => {
     let ignore = false;
 
@@ -31,6 +30,6 @@ export default async function useHousings() {
       ignore = true;
     };
   }, []);
-  console.log(housings);
+
   return { isLoading, error, housings };
 }

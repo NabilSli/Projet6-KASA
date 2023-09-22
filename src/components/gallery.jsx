@@ -6,8 +6,7 @@ import useHousings from "./useHousings";
 // NOTE: this function uses the fetch to either show housings or
 //       loading while it get the data or an error if ther is no data
 export default function Gallery() {
-  const { error, housings, isLoading } = useHousings();
-  console.log(housings);
+  const { error, isLoading, housings } = useHousings();
 
   if (error) {
     return <p>{error}</p>;
