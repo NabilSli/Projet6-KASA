@@ -12,7 +12,11 @@ export default function Collapse({
       <button onClick={isOpen ? close : open}>
         <section className="collapseTitle">
           <p>{collapseTitle}</p>
-          <img alt="fleche de fermeture du menu" src={arrow}></img>
+          <img
+            className="arrow"
+            alt="fleche de fermeture du menu"
+            src={arrow}
+          ></img>
         </section>
         <section className="collapseTexte">
           <p className={`text-container ${isOpen ? "open" : "closed"}`}>

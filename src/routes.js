@@ -8,6 +8,11 @@ const routes = {
   Aboutus: { path: "/aboutUs", Element: AboutUs, id: "aboutUsPage" },
   Error: { path: "*", Element: Error, id: "errorPage" },
   Housing: { path: "/housing", Element: Housing, id: "housingPage" },
+  HousingParams: {
+    path: "/housing/:id",
+    Element: Housing,
+    id: "housingParamsPage",
+  },
 };
 
 export default routes;

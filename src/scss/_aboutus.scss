@@ -20,7 +20,7 @@
   max-height: 0;
   overflow: hidden;
   transition: transform max-height 0.3s ease-in-out;
-  .collapseTitle img {
+  .arrow {
     transform: rotate(0deg);
   }
 }
@@ -32,11 +32,11 @@
 }
 
 .text-container.open {
-  max-height: 120px; /* Adjust this based on your content size */
+  max-height: 120px;
   opacity: 1;
-  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
   padding: 10px 20px 20px 20px;
-  .collapseTitle img {
+  .arrow {
     transform: rotate(180deg);
   }
 }
