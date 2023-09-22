@@ -1,0 +1,116 @@
+@import "base";
+@import "variable";
+
+.imageCard {
+  width: 100%;
+  border-radius: 5px;
+  height: 111px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/images/cardBackground.svg");
+  background-size: cover;
+  background-position: center;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+.collapseComponentClosed {
+  button {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-txt-color;
+    border: none;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    transition: height 1500ms ease-in-out;
+    section {
+      border-radius: 5px;
+    }
+  }
+}
+.openCollapseTexte {
+  transition: height 1500ms ease-in-out;
+}
+.collapseComponentOpen {
+  button {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    section {
+      color: #fff;
+      background-color: $main-txt-color;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    p {
+      border-radius: 0 0 5px 5px;
+    }
+  }
+}
+
+.openCollapseTexte {
+  color: $main-txt-color;
+  background-color: #f6f6f6;
+  padding: 20px;
+  text-align: start;
+  line-height: 130%;
+  font-style: normal;
+}
+
+@media (min-width: 769px) {
+  .collapseSection {
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    width: 100%;
+  }
+
+  .collapseComponentClosed {
+    width: 100%;
+    button {
+      padding: 20px 10px;
+    }
+  }
+  .imageCard {
+    border-radius: 25px;
+    height: 213px;
+  }
+}
+
+.text-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.text-container.closed {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.text-container.open {
+  max-height: 100px; /* Adjust this based on your content size */
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}

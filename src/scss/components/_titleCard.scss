@@ -1,0 +1,23 @@
+@import "../base";
+@import "../variable";
+
+.titleCardContainer {
+  width: 100%;
+  border-radius: 5px;
+  height: 111px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/images/titleBackground.svg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-left: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media (min-width: 769px) {
+}
