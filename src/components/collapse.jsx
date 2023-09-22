@@ -14,10 +14,7 @@ export default function Collapse({
           <p>{collapseTitle}</p>
           <img alt="fleche de fermeture du menu" src={arrow}></img>
         </section>
-        <p
-          onClick={close}
-          className={`text-container ${isOpen ? "open" : "closed"}`}
-        >
+        <p className={`text-container ${isOpen ? "open" : "closed"}`}>
           {collapseTexte}
         </p>
       </button>
