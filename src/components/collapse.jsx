@@ -8,7 +8,7 @@ export default function Collapse({
   close,
 }) {
   return (
-    <div className="collapseComponent">
+    <div className={`collapseComponent ${isOpen ? "open" : ""}`}>
       <button onClick={isOpen ? close : open}>
         <section className="collapseTitle">
           <p>{collapseTitle}</p>
