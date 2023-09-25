@@ -23,7 +23,12 @@ export default function Gallery() {
   return (
     <section className="gallery">
       {housings.map((house) => (
-        <Card title={house.title} key={house.id} image={house.cover} />
+        <Card
+          title={house.title}
+          key={house.id}
+          image={house.cover}
+          id={house.id}
+        />
       ))}
     </section>
   );
