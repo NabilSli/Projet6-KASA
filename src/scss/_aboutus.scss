@@ -23,6 +23,7 @@
   .arrow {
     transform: rotate(0deg);
   }
+
 }
 
 .text-container.closed {
@@ -49,8 +50,6 @@
     height: 30px;
     border: none;
     background-color: #fff;
-  }
-  :hover {
     cursor: pointer;
   }
 }
