@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          {/* NOTE: remplir les routes une a une */}
+          {/* TODO: remplir les routes une a une */}
           {Object.values(routes).map((route) => (
             <Route path={route.path} element={<route.Element />} key={<id />} />
           ))}
