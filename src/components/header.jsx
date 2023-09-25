@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import routes from "../routes";
+import { home, aboutUs } from "../routes";
 
 import logoHeader from "../assets/images/logoHeader.svg";
 
@@ -11,10 +11,10 @@ function Header() {
       <nav>
         <ul className="navLinks">
           <li>
-            <NavLink to={routes.Home.path}>Accueil</NavLink>
+            <NavLink to={home.path}>Accueil</NavLink>
           </li>
           <li>
-            <NavLink to={routes.Aboutus.path}>A Propos</NavLink>
+            <NavLink to={aboutUs.path}>A Propos</NavLink>
           </li>
         </ul>
       </nav>

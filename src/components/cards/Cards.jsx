@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import fallbackImage from "../../assets/images/titleBackground.svg";
 
-export const Card = ({ title, image }) => {
+export const Card = ({ title, image, id }) => {
   const backgroundImage =
     typeof image == "string" && image.length > 0 ? image : fallbackImage;
 
   return (
-    <Link to={"/housing"}>
+    <Link to={`/housing/${id}`}>
       <div
         className="cardContainer"
         style={{

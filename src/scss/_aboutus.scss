@@ -20,6 +20,10 @@
   max-height: 0;
   overflow: hidden;
   transition: transform max-height 0.3s ease-in-out;
+  .arrow {
+    transform: rotate(0deg);
+  }
+
 }
 
 .text-container.closed {
@@ -31,16 +35,11 @@
 .text-container.open {
   max-height: 120px;
   opacity: 1;
-  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
   padding: 10px 20px 20px 20px;
-}
-
-.collapseTitle img {
-  transition: transform 0.3s ease; // Ajoutez une transition pour une animation fluide
-}
-
-.open .collapseTitle img {
-  transform: rotate(180deg);
+  .arrow {
+    transform: rotate(180deg);
+  }
 }
 
 .collapseComponent {
