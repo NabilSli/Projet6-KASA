@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
-import useHousings from "./useHousings";
-
-const Carousel = () => {
-  const { housings } = useHousings();
+const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextImage = () => {
@@ -18,14 +15,19 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      <button onClick={prevImage} className="arrow left"></button>
+      <button onClick={prevImage} className="arrow left">{`<`}</button>
       <div className="image-container">
-        <img src={pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+        <img
+          src={pictures[currentIndex]}
+          alt={`pictures ${currentIndex + 1}`}
+        />
         <div className="counter">{`${currentIndex + 1}/${
           pictures.length
         }`}</div>
       </div>
-      <button onClick={nextImage} className="arrow right"></button>
+      <button onClick={nextImage} className="arrow right">
+        {">"}
+      </button>
     </div>
   );
 };
