@@ -6,6 +6,7 @@ import useHousings from "../components/useHousings";
 import TitleAndLocation from "../components/houses/titleAndLocation";
 import DisplayTags from "../components/houses/tags";
 import DisplayHost from "../components/houses/host";
+import Collapse from "../components/collapse";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -27,9 +28,11 @@ export default function HousingPage() {
   const currentHousing = housings.find((house) => house.id === id);
   const tags = currentHousing.tags;
   const host = currentHousing.host;
+  const description = currentHousing.description;
+  const equipments = currentHousing.equipments;
 
   return (
-    <div>
+    <section>
       <Carousel id={id} pictures={currentHousing.pictures} />
       <TitleAndLocation
         id={id}
@@ -44,6 +47,21 @@ export default function HousingPage() {
         ))}
       </ul>
       <DisplayHost name={host.name} portait={host.picture} />
-    </div>
+      <div className="housingsCollapse">
+        <Collapse collapseTitle="Description" collapseTexte={description} />
+        <Collapse
+          collapseTitle="Équipements"
+          collapseTexte={
+            <ul>
+              {equipments.map((equipment) => (
+                <>
+                  <li>{equipment}</li>
+                </>
+              ))}
+            </ul>
+          }
+        />
+      </div>
+    </section>
   );
 }
