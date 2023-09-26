@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "../components/houses/caroussel";
 import useHousings from "../components/useHousings";
+import TitleAndLocation from "../components/houses/titleAndLocation";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -25,7 +26,12 @@ export default function HousingPage() {
 
   return (
     <div>
-      Housing <Carousel id={id} pictures={currentHousing.pictures} />
+      <Carousel id={id} pictures={currentHousing.pictures} />
+      <TitleAndLocation
+        id={id}
+        title={currentHousing.title}
+        location={currentHousing.location}
+      />
     </div>
   );
 }
