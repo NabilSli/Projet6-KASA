@@ -7,6 +7,7 @@ import TitleAndLocation from "../components/houses/titleAndLocation";
 import DisplayTags from "../components/houses/tags";
 import DisplayHost from "../components/houses/host";
 import Collapse from "../components/collapse";
+import { DisplayActiveStar } from "../components/houses/rating";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -30,6 +31,7 @@ export default function HousingPage() {
   const host = currentHousing.host;
   const description = currentHousing.description;
   const equipments = currentHousing.equipments;
+  const rating = currentHousing.rating;
 
   return (
     <section>
@@ -46,7 +48,10 @@ export default function HousingPage() {
           </>
         ))}
       </ul>
-      <DisplayHost name={host.name} portait={host.picture} />
+      <div className="ratingAndHost">
+        {}
+        <DisplayHost name={host.name} portait={host.picture} />
+      </div>
       <div className="housingsCollapse">
         <Collapse collapseTitle="Description" collapseTexte={description} />
         <Collapse
