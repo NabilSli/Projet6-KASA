@@ -20,6 +20,7 @@ export default function HousingPage() {
     return <p>Aucun logements a afficher</p>;
   }
 
+  // TODO: merge this with "useHousings" function hook a "useHousingById" hook
   const currentHousing = housings.find((house) => house.id === id);
 
   return (

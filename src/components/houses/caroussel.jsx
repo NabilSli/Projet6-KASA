@@ -15,7 +15,9 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <button onClick={prevImage} className="arrow left">{`<`}</button>
+      <button onClick={prevImage} className="arrow left">
+        {"<"}
+      </button>
       <div className="image-container">
         <img
           src={pictures[currentIndex]}
