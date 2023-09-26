@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/houses/caroussel";
 import useHousings from "../components/useHousings";
 import TitleAndLocation from "../components/houses/titleAndLocation";
+import DisplayTags from "../components/houses/tags";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -23,6 +24,7 @@ export default function HousingPage() {
 
   // TODO: merge this with "useHousings" function hook a "useHousingById" hook
   const currentHousing = housings.find((house) => house.id === id);
+  const tags = currentHousing.tags;
 
   return (
     <div>
@@ -32,6 +34,13 @@ export default function HousingPage() {
         title={currentHousing.title}
         location={currentHousing.location}
       />
+      <ul>
+        {tags.map((tag) => (
+          <>
+            <DisplayTags tags={tag} />
+          </>
+        ))}
+      </ul>
     </div>
   );
 }
