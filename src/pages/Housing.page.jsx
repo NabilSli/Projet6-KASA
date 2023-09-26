@@ -5,6 +5,7 @@ import Carousel from "../components/houses/caroussel";
 import useHousings from "../components/useHousings";
 import TitleAndLocation from "../components/houses/titleAndLocation";
 import DisplayTags from "../components/houses/tags";
+import DisplayHost from "../components/houses/host";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -25,6 +26,7 @@ export default function HousingPage() {
   // TODO: merge this with "useHousings" function hook a "useHousingById" hook
   const currentHousing = housings.find((house) => house.id === id);
   const tags = currentHousing.tags;
+  const host = currentHousing.host;
 
   return (
     <div>
@@ -41,6 +43,7 @@ export default function HousingPage() {
           </>
         ))}
       </ul>
+      <DisplayHost name={host.name} portait={host.picture} />
     </div>
   );
 }
