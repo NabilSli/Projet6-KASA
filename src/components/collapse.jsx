@@ -3,6 +3,7 @@ import arrow from "../assets/images/arrow.svg";
 export default function Collapse({
   collapseTitle,
   collapseTexte,
+  collapseList,
   isOpen,
   open,
   close,
@@ -22,6 +23,7 @@ export default function Collapse({
           <p className={`text-container ${isOpen ? "open" : "closed"}`}>
             {collapseTexte}
           </p>
+          {collapseList}
         </section>
       </button>
     </div>

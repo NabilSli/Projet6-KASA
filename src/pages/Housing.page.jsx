@@ -7,7 +7,7 @@ import TitleAndLocation from "../components/houses/titleAndLocation";
 import DisplayTags from "../components/houses/tags";
 import DisplayHost from "../components/houses/host";
 import Collapse from "../components/collapse";
-import { DisplayActiveStar } from "../components/houses/rating";
+import StarRating from "../components/houses/rating";
 
 export default function HousingPage() {
   const { id } = useParams();
@@ -44,19 +44,19 @@ export default function HousingPage() {
       <ul>
         {tags.map((tag) => (
           <>
-            <DisplayTags tags={tag} />
+            <DisplayTags tags={tag} key={id} />
           </>
         ))}
       </ul>
       <div className="ratingAndHost">
-        {}
+        <StarRating rating={rating} />
         <DisplayHost name={host.name} portait={host.picture} />
       </div>
       <div className="housingsCollapse">
         <Collapse collapseTitle="Description" collapseTexte={description} />
         <Collapse
           collapseTitle="Équipements"
-          collapseTexte={
+          collapseList={
             <ul>
               {equipments.map((equipment) => (
                 <>
