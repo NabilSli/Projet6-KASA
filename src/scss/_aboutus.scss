@@ -15,28 +15,32 @@
   padding-left: 16px;
   margin-bottom: 20px;
 }
-
-.text-container {
-  max-height: 0;
+.collapseTexte {
+  position: relative;
+  z-index: 998;
   overflow: hidden;
-  transition: transform max-height 0.3s ease-in-out;
+  padding: 10px 20px 20px 20px;
+  // transition: transform max-height 0.3s ease-in-out;
   .arrow {
     transform: rotate(0deg);
   }
-
 }
 
-.text-container.closed {
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+.collapseTexte.closed {
+  // max-height: 0;
+  // opacity: 0;
+  // transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
-.text-container.open {
-  max-height: 120px;
-  opacity: 1;
-  transition: transform max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
-  padding: 10px 20px 20px 20px;
+.collapseTexte.open {
+  // max-height: 120px;
+  // opacity: 1;
+  // transition: transform max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+
   .arrow {
     transform: rotate(180deg);
   }
@@ -47,7 +51,6 @@
   button {
     width: 100%;
     border-radius: 5px;
-    height: 30px;
     border: none;
     background-color: #fff;
     cursor: pointer;
@@ -55,6 +58,8 @@
 }
 
 .collapseTitle {
+  z-index: 999;
+  position: relative;
   width: 100%;
   background-color: $main-txt-color;
   border: none;
@@ -72,6 +77,10 @@
   border-radius: 0 0 5px 5px;
   background-color: #f6f6f6;
   text-align: start;
+}
+
+.collapseComponent {
+  overflow: hidden;
 }
 
 @media (min-width: 769px) {

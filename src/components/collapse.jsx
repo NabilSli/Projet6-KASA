@@ -19,10 +19,8 @@ export default function Collapse({
             src={arrow}
           ></img>
         </section>
-        <section className="collapseTexte">
-          <p className={`text-container ${isOpen ? "open" : "closed"}`}>
-            {collapseTexte}
-          </p>
+        <section className={`collapseTexte ${isOpen ? "open" : "closed"}`}>
+          <p className="textContainer">{collapseTexte}</p>
           {collapseList}
         </section>
       </button>
