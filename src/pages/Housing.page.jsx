@@ -43,9 +43,7 @@ export default function HousingPage() {
       />
       <ul>
         {tags.map((tag) => (
-          <>
-            <DisplayTags tags={tag} key={id} />
-          </>
+          <DisplayTags tags={tag} key={tag} />
         ))}
       </ul>
       <div className="ratingAndHost">
@@ -59,9 +57,7 @@ export default function HousingPage() {
           collapseList={
             <ul>
               {equipments.map((equipment) => (
-                <>
-                  <li>{equipment}</li>
-                </>
+                <li key={equipment}>{equipment}</li>
               ))}
             </ul>
           }
