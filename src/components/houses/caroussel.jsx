@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import arrowRight from "../../assets/images/arrowRight.svg";
+import arrowLeft from "../../assets/images/arrowLeft.svg";
+
 const Carousel = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,21 +18,22 @@ const Carousel = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <button onClick={prevImage} className="arrow left">
-        {"<"}
-      </button>
       <div className="image-container">
+        {" "}
+        <button onClick={prevImage} className="arrowLeft">
+          <img src={arrowLeft} alt="previous button"></img>
+        </button>
         <img
           src={pictures[currentIndex]}
           alt={`pictures ${currentIndex + 1}`}
         />
+        <button onClick={nextImage} className="arrowRight">
+          <img src={arrowRight} alt="next button"></img>
+        </button>
         <div className="counter">{`${currentIndex + 1}/${
           pictures.length
         }`}</div>
       </div>
-      <button onClick={nextImage} className="arrow right">
-        {">"}
-      </button>
     </div>
   );
 };
