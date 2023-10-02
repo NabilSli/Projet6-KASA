@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useParams } from "react-router-dom";
 import Carousel from "../components/houses/caroussel";
@@ -12,6 +12,7 @@ import StarRating from "../components/houses/rating";
 export default function HousingPage() {
   const { id } = useParams();
   const { error, isLoading, housings } = useHousings();
+  const [selectedCollapse, setSelectedCollapse] = useState(null);
 
   if (error) {
     return <p>{error}</p>;
@@ -55,7 +56,17 @@ export default function HousingPage() {
         </div>
       </section>
       <div className="housingsCollapse">
-        <Collapse collapseTitle="Description" collapseTexte={description} />
+        <Collapse
+          collapseTitle="Description"
+          collapseTexte={description}
+          isOpen={selectedCollapse === "description"}
+          close={() => {
+            setSelectedCollapse(null);
+          }}
+          open={() => {
+            setSelectedCollapse("description");
+          }}
+        />
         <Collapse
           collapseTitle="Équipements"
           collapseList={
@@ -65,6 +76,13 @@ export default function HousingPage() {
               ))}
             </ul>
           }
+          isOpen={selectedCollapse === "equipment"}
+          close={() => {
+            setSelectedCollapse(null);
+          }}
+          open={() => {
+            setSelectedCollapse("equipment");
+          }}
         />
       </div>
     </section>
