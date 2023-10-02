@@ -15,6 +15,10 @@
   justify-content: space-between;
 }
 
+.titleAndTags {
+  margin-bottom: 15px;
+}
+
 @media (min-width: 769px) {
   .housingContent {
     flex-direction: row;
@@ -22,5 +26,14 @@
 
   .ratingAndHost {
     flex-direction: column-reverse;
+  }
+
+  .housingsCollapse {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+    .collapseComponent {
+      width: 50%;
+    }
   }
 }

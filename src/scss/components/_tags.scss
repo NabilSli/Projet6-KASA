@@ -21,6 +21,17 @@
   height: 18px;
 }
 
+.starInactive {
+  width: 30px;
+  height: 30px;
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 @media (min-width: 769px) {
   .tags {
     border-radius: 10px;
