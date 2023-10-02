@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Carousel from "../components/houses/caroussel";
 import useHousings from "../components/useHousings";
 import TitleAndLocation from "../components/houses/titleAndLocation";
@@ -13,7 +13,7 @@ export default function HousingPage() {
   const { id } = useParams();
   const { error, isLoading, housings } = useHousings();
   const [selectedCollapse, setSelectedCollapse] = useState(null);
-
+  const navigate = useNavigate();
   if (error) {
     return <p>{error}</p>;
   }
@@ -22,12 +22,15 @@ export default function HousingPage() {
     return <p>Loading ...</p>;
   }
 
-  if (!housings || !housings.length) {
-    return <p>Aucun logements a afficher</p>;
+  if (!housings || housings.length <= 0) {
+    return navigate("/404");
   }
 
   // TODO: merge this with "useHousings" function hook a "useHousingById" hook
   const currentHousing = housings.find((house) => house.id === id);
+  if (!currentHousing || currentHousing.length <= 0) {
+    return navigate("/404");
+  }
   const tags = currentHousing.tags;
   const host = currentHousing.host;
   const description = currentHousing.description;
