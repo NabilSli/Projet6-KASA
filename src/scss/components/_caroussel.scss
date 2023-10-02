@@ -1,0 +1,22 @@
+@import "../base";
+@import "../variable";
+
+.carousel {
+  width: 100%;
+}
+
+.image-container {
+  img {
+    width: 100%;
+  }
+}
+
+.arrowLeft {
+  border: none;
+  background-color: transparent;
+}
+
+.arrowRight {
+  border: none;
+  background-color: transparent;
+}
