@@ -6,17 +6,37 @@
 }
 
 .image-container {
+  position: relative;
   img {
     width: 100%;
   }
+  .arrowLeft {
+    position: absolute;
+    left: 3%;
+    top: 40%;
+    border: none;
+    background-color: transparent;
+  }
+  .arrowRight {
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    border: none;
+    background-color: transparent;
+  }
+  .counter {
+    display: none;
+  }
 }
 
-.arrowLeft {
-  border: none;
-  background-color: transparent;
-}
-
-.arrowRight {
-  border: none;
-  background-color: transparent;
+@media (min-width: 769px) {
+  .image-container {
+    .counter {
+      display: block;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      color: white;
+    }
+  }
 }

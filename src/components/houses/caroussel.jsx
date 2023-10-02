@@ -19,7 +19,7 @@ const Carousel = ({ pictures }) => {
   return (
     <div className="carousel">
       <div className="image-container">
-        {" "}
+        {""}
         <button onClick={prevImage} className="arrowLeft">
           <img src={arrowLeft} alt="previous button"></img>
         </button>
