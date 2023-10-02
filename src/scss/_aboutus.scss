@@ -15,83 +15,16 @@
   padding-left: 16px;
   margin-bottom: 20px;
 }
-.collapseTexte {
-  position: relative;
-  z-index: 998;
-  overflow: hidden;
-  padding: 10px 20px 20px 20px;
-  // transition: transform max-height 0.3s ease-in-out;
-  .arrow {
-    transform: rotate(0deg);
-  }
-}
-
-.collapseTexte.closed {
-  // max-height: 0;
-  // opacity: 0;
-  // transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.collapseTexte.open {
-  // max-height: 120px;
-  // opacity: 1;
-  // transition: transform max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
-
-  .arrow {
-    transform: rotate(180deg);
-  }
-}
-
-.collapseComponent {
-  margin-bottom: 20px;
-  button {
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    background-color: #fff;
-    cursor: pointer;
-  }
-}
-
-.collapseTitle {
-  z-index: 999;
-  position: relative;
-  width: 100%;
-  background-color: $main-txt-color;
-  border: none;
-  padding: 0 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 5px;
-  color: #fff;
-}
-
-.collapseTexte {
-  color: $main-txt-color;
-  border-radius: 0 0 5px 5px;
-  background-color: #f6f6f6;
-  text-align: start;
-}
-
-.collapseComponent {
-  overflow: hidden;
-}
 
 @media (min-width: 769px) {
+  .imageCard {
+    border-radius: 25px;
+    height: 213px;
+  }
   .collapseSection {
     display: flex;
     flex-direction: column;
     padding: 0 70px;
     width: 100%;
-  }
-  .imageCard {
-    border-radius: 25px;
-    height: 213px;
   }
 }
