@@ -2,7 +2,7 @@ const TitleAndLocation = ({ title, location }) => {
   return (
     <div>
       <h2 className="housingTitle">{title}</h2>
-      <p className="housingDescription">{location}</p>
+      <p className="housingLocation">{location}</p>
     </div>
   );
 };
