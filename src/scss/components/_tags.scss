@@ -8,7 +8,7 @@
 
 .tags {
   list-style: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background: #ff6060;
   color: white;
   text-align: center;
@@ -19,4 +19,12 @@
   padding: 2px 5px;
   min-width: 84px;
   height: 18px;
+}
+
+@media (min-width: 769px) {
+  .tags {
+    min-width: 115px;
+    height: 25px;
+    font-size: 14px;
+  }
 }
