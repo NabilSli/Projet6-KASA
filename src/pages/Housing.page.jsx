@@ -36,20 +36,24 @@ export default function HousingPage() {
   return (
     <section>
       <Carousel id={id} pictures={currentHousing.pictures} />
-      <TitleAndLocation
-        id={id}
-        title={currentHousing.title}
-        location={currentHousing.location}
-      />
-      <ul>
-        {tags.map((tag) => (
-          <DisplayTags tags={tag} key={tag} />
-        ))}
-      </ul>
-      <div className="ratingAndHost">
-        <StarRating rating={rating} />
-        <DisplayHost name={host.name} portait={host.picture} />
-      </div>
+      <section className="housingContent">
+        <div className="titleAndTags">
+          <TitleAndLocation
+            id={id}
+            title={currentHousing.title}
+            location={currentHousing.location}
+          />
+          <ul className="displayTag">
+            {tags.map((tag) => (
+              <DisplayTags tags={tag} key={tag} />
+            ))}
+          </ul>
+        </div>
+        <div className="ratingAndHost">
+          <StarRating rating={rating} />
+          <DisplayHost name={host.name} portait={host.picture} />
+        </div>
+      </section>
       <div className="housingsCollapse">
         <Collapse collapseTitle="Description" collapseTexte={description} />
         <Collapse
