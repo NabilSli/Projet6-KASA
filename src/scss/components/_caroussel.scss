@@ -31,6 +31,9 @@
 
 @media (min-width: 769px) {
   .image-container {
+    img {
+      border-radius: 25px;
+    }
     .counter {
       display: block;
       position: absolute;
