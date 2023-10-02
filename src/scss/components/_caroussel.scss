@@ -3,6 +3,7 @@
 
 .carousel {
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .image-container {
@@ -30,6 +31,10 @@
 }
 
 @media (min-width: 769px) {
+  .carousel {
+    margin-bottom: 20px;
+  }
+
   .image-container {
     img {
       border-radius: 25px;
