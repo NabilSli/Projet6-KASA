@@ -1,4 +1,4 @@
 const DisplayTags = ({ tags }) => {
-  return <li>{tags}</li>;
+  return <li className="tags">{tags}</li>;
 };
 export default DisplayTags;
