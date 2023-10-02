@@ -1,8 +1,8 @@
 const DisplayHost = ({ name, portait }) => {
   return (
-    <div>
-      <p>{name}</p>
-      <img alt={name} src={portait}></img>
+    <div className="hostContent">
+      <p className="hostName">{name}</p>
+      <img className="hostPicture" alt={name} src={portait}></img>
     </div>
   );
 };

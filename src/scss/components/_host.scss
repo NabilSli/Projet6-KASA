@@ -1,0 +1,27 @@
+@import "../base";
+@import "../variable";
+
+.hostContent {
+  display: flex;
+  align-items: center;
+}
+
+.hostName {
+  color: $main-txt-color;
+  margin-right: 10px;
+  width: 50%;
+  text-align: right;
+}
+
+.hostPicture {
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+}
+
+@media (min-width: 769px) {
+  .hostPicture {
+    width: 64px;
+    height: 64px;
+  }
+}

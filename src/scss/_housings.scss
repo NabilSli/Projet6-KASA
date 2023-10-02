@@ -4,6 +4,8 @@
 .housingContent {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .ratingAndHost {
@@ -16,5 +18,9 @@
 @media (min-width: 769px) {
   .housingContent {
     flex-direction: row;
+  }
+
+  .ratingAndHost {
+    flex-direction: column-reverse;
   }
 }
