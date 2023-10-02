@@ -20,7 +20,9 @@ export default function Collapse({
           ></img>
         </section>
         <section className={`collapseTexte ${isOpen ? "open" : "closed"}`}>
-          <p className="textContainer">{collapseTexte}</p>
+          {collapseTexte?.length > 0 && (
+            <p className="textContainer">{collapseTexte}</p>
+          )}
           {collapseList}
         </section>
       </button>
