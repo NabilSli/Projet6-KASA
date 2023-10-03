@@ -1,0 +1,31 @@
+@import "../base";
+@import "../variable";
+
+.housingTitle {
+  color: #ff6060;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  margin-bottom: 5px;
+}
+
+.housingLocation {
+  color: #ff6060;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 769px) {
+  .housingTitle {
+    font-size: 36px;
+  }
+
+  .housingLocation {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}

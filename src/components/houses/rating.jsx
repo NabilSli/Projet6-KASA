@@ -30,7 +30,7 @@ const StarRating = ({ rating }) => {
     );
   }
 
-  return <div className="star-rating">{stars}</div>;
+  return <div className="starRating">{stars}</div>;
 };
 
 export default StarRating;

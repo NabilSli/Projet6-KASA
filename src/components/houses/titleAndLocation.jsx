@@ -1,8 +1,8 @@
 const TitleAndLocation = ({ title, location }) => {
   return (
     <div>
-      <h2>{title}</h2>
-      <p>{location}</p>
+      <h2 className="housingTitle">{title}</h2>
+      <p className="housingLocation">{location}</p>
     </div>
   );
 };
