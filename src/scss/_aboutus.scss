@@ -3,7 +3,7 @@
 
 .imageCard {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 111px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
 @media (min-width: 769px) {
   .imageCard {
     border-radius: 25px;
-    height: 213px;
+    height: 223px;
   }
   .collapseSection {
     display: flex;
