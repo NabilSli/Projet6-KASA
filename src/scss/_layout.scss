@@ -38,7 +38,9 @@
     border-bottom: solid 2px $main-txt-color;
   }
 }
-
+.active {
+  border-bottom: solid 2px $main-txt-color;
+}
 .bodyContainer {
   margin: 20px;
 }
