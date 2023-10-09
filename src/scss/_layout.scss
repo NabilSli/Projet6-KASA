@@ -111,5 +111,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px 50px;
+    min-width: 635px;
   }
 }
