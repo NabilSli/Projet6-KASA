@@ -21,14 +21,19 @@ const Carousel = ({ pictures }) => {
       <div className="image-container">
         {""}
         <button onClick={prevImage} className="arrowLeft">
-          <img src={arrowLeft} alt="previous button"></img>
+          <img
+            src={arrowLeft}
+            alt="previous button"
+            className="arrowLeft"
+          ></img>
         </button>
         <img
+          className="carousselPictures"
           src={pictures[currentIndex]}
           alt={`pictures ${currentIndex + 1}`}
         />
         <button onClick={nextImage} className="arrowRight">
-          <img src={arrowRight} alt="next button"></img>
+          <img src={arrowRight} alt="next button" className="arrowRight"></img>
         </button>
         <div className="counter">{`${currentIndex + 1}/${
           pictures.length

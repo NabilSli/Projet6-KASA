@@ -3,27 +3,33 @@
 
 .carousel {
   width: 100%;
+
   margin-bottom: 5px;
 }
 
 .image-container {
   position: relative;
-  img {
+  .carousselPictures {
+    height: 255px;
     width: 100%;
   }
   .arrowLeft {
     position: absolute;
     left: 3%;
-    top: 40%;
+    top: 45%;
     border: none;
     background-color: transparent;
   }
   .arrowRight {
     position: absolute;
     right: 3%;
-    top: 40%;
+    top: 45%;
     border: none;
     background-color: transparent;
+  }
+  .arrowLeft,
+  .arrowRight:hover {
+    cursor: pointer;
   }
   .counter {
     display: none;
@@ -36,7 +42,17 @@
   }
 
   .image-container {
-    img {
+    .arrowLeft {
+      height: 80px;
+      top: 35%;
+    }
+    .arrowRight {
+      height: 80px;
+      top: 35%;
+    }
+    .carousselPictures {
+      height: 415px;
+      object-fit: cover;
       border-radius: 25px;
     }
     .counter {
