@@ -93,6 +93,11 @@
   color: $main-white;
 }
 
+.footerTxt {
+  width: 175px;
+  text-align: center;
+}
+
 // desktop view
 @media (min-width: 769px) {
   .header {
@@ -112,5 +117,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px 50px;
     min-width: 635px;
+  }
+
+  .footerTxt {
+    width: 100%;
+    text-align: center;
   }
 }
